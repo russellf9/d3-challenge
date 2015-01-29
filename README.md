@@ -10,3 +10,12 @@ bower install nvd3 --save-dev
 bower install angularjs-nvd3-directives --save-dev
 ```
 
+## Plugins
+
+In install modules
+
+```
+npm update
+bower update
+```
+
