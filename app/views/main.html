@@ -10,10 +10,11 @@
 
 <div class="row light-grey">
     <div class="col-md-12">
-        <div class="well component-well dark-grey" style="margin-top: 20px;">                   {{main.test}}
+        <div class="well component-well dark-grey" ng-controller="Manager as manager" style="margin-top: 20px;">
             Panel content
+            <p>{{main.test}}</p>
         </div>
-        <div class="well component-well dark-grey">
+        <div class="well component-well dark-grey" ng-controller="Projection as projection">
             Panel content 3
         </div>
     </div>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('challengeAppApp', [
+angular.module('app', [
   'ngCookies',
   'ngResource',
   'ngSanitize',

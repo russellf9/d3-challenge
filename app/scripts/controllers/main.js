@@ -1,11 +1,18 @@
-'use strict';
+(function() {
+    'use strict';
 
-angular.module('challengeAppApp')
-  .controller('MainCtrl', function ($scope) {
-//    $scope.awesomeThings = [
-//      'HTML5 Boilerplate',
-//      'AngularJS',
-//      'Karma'
-//    ];
-    this.test = 'test';
-  });
+
+angular.module('app')
+    .controller('MainCtrl', ['Model', function($scope, Model) {
+
+        this.test = 'my test';
+
+        console.log('MainCtrl', Model);
+
+        var self = this;
+
+//        Model.getData(function(results) {
+//            self.model = results;
+//        });
+    }]);
+}());
