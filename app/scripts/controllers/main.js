@@ -9,10 +9,6 @@
 
         console.log('MainCtrl | model: ', Model);
 
-        //var self = this;
 
-//        Model.getData(function(results) {
-//            self.model = results;
-//        });
       }]);
   }());

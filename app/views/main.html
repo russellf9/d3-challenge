@@ -9,10 +9,11 @@
 
 
 <div class="row light-grey">
-    <div class="col-md-12">
+    <div class="col-md-12" ng-controller="Data as data">
         <div class="well component-well dark-grey" ng-controller="Manager as manager" style="margin-top: 20px;">
             Panel content
             <p>{{main.test}}</p>
+            <p>{{data.model.current_date}}</p>
         </div>
         <div class="well component-well dark-grey" ng-controller="Projection as projection">
             Panel content 3

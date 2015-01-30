@@ -7,6 +7,8 @@
 
         console.log('manager! model: ', Model);
 
+
+
       }]);
   }());
 
