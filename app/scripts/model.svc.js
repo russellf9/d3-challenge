@@ -7,8 +7,9 @@
      */
     angular.module('app').service('Model', ['$rootScope', '$http', function($rootScope, $http) {
 
-        var _data;
-
+        var _data,
+            _currentPeriod,
+            _values = {};
 
         return {
 
@@ -21,6 +22,26 @@
                         callback(data);
                       });
                 }
+              },
+            // just the numerical value
+            setCurrentPeriod : function(value) {
+                console.log('setCurrentPeriod');
+
+                _currentPeriod = value;
+
+                this.update();
+              },
+            getCurrentPeriod : function() {
+                return _values.currentPeriod;
+              },
+            getUpdateValues: function() {
+                return _values;
+              },
+            update : function() {
+                console.log('update');
+                _values.currentPeriod =  _currentPeriod;
+
+                $rootScope.$broadcast('valuesUpdated');
               }
           };
 

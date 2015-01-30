@@ -12,7 +12,7 @@
     <div class="col-md-12" ng-controller="Data as data">
         <div class="well component-well dark-grey" ng-controller="Manager as manager" style="margin-top: 20px; height: 200px;">
             Panel content
-            <p>{{main.test}}</p>
+            <p>Time period: {{data.currentPeriod.period}}</p>
 
 
             <div class="form-horizontal">
@@ -36,17 +36,21 @@
                                 <p id="currentDate" style="display: inline">{{data.model.current_date | date: 'MMMM yyyy'}}</p>
                                 <p id="period" style="display: inline">{{data.model.periodicity | capitalizeAllWords}}</p>
                             </div>
-                            <!--<label for="inputValue" class="col-md-1 control-label">Value</label>-->
-                            <!--<div class="col-md-2">-->
-                                <!--<input type="text" class="form-control" id="inputValue" placeholder="Value">-->
-                            <!--</div>-->
+                            <div class="col-md-3">
+                                <label for="forecastPeriod" class="col-md-1 control-label form-label" style="text-align: left">Forecast Period</label>
+                                <select id="forecastPeriod" class="form-control" ng-model="data.currentPeriod" ng-change="data.updateForecastPeriod()" ng-options="item as item.name for item in data.forecastPeriods">
+                                    <pre>{{selectedItem | json}}</pre>
+                                    <option value="" ng-if="data.currentPeriod">Select Forecast period.</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="well component-well dark-grey" ng-controller="Projection as projection">
-            Panel content 3
+            <h5>projection</h5>
+            currentPeriod: {{projection.currentPeriod}}
         </div>
     </div>
 </div>
