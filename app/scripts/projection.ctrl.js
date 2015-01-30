@@ -15,6 +15,8 @@
             console.log('update!: ', Model);
 
             self.currentPeriod = Model.getCurrentPeriod();
+
+            self.currentGrowthType = Model.getGrowthType();
         });
 
       }]);

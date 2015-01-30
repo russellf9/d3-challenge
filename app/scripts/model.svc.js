@@ -9,6 +9,7 @@
 
         var _data,
             _currentPeriod,
+            _growthType,
             _values = {};
 
         return {
@@ -34,6 +35,13 @@
             getCurrentPeriod : function() {
                 return _values.currentPeriod;
               },
+            setGrowthType: function(value) {
+                _growthType = value;
+                this.update();
+            },
+            getGrowthType: function() {
+                return _growthType;
+            },
             getUpdateValues: function() {
                 return _values;
               },

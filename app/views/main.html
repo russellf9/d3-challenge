@@ -13,6 +13,7 @@
         <div class="well component-well dark-grey" ng-controller="Manager as manager" style="margin-top: 20px; height: 200px;">
             Panel content
             <p>Time period: {{data.currentPeriod.period}}</p>
+            <p> {{data.currentGrowthType}}</p>
 
 
             <div class="form-horizontal">
@@ -31,17 +32,24 @@
                 <div class="form-group">
                     <div class="col-md-12">
                         <div class="form-group row">
+                            <!--DATE-->
                             <div class="col-md-3">
                                 <label for="currentDate" class="col-md-3 control-label form-label" style="text-align: left">Current Date</label>
                                 <p id="currentDate" style="display: inline">{{data.model.current_date | date: 'MMMM yyyy'}}</p>
                                 <p id="period" style="display: inline">{{data.model.periodicity | capitalizeAllWords}}</p>
                             </div>
+                            <!--PERIOD-->
                             <div class="col-md-3">
                                 <label for="forecastPeriod" class="col-md-1 control-label form-label" style="text-align: left">Forecast Period</label>
                                 <select id="forecastPeriod" class="form-control" ng-model="data.currentPeriod" ng-change="data.updateForecastPeriod()" ng-options="item as item.name for item in data.forecastPeriods">
                                     <pre>{{selectedItem | json}}</pre>
                                     <option value="" ng-if="data.currentPeriod">Select Forecast period.</option>
                                 </select>
+                            </div>
+                            <!--GROWTH TYPE-->
+                            <div class="col-md-3">
+                                <label for="growth" class="col-md-1 control-label form-label" style="text-align: left">Growth</label>
+                                <select id="growth" class="form-control" ng-model="data.currentGrowthType" ng-options="currOption for currOption in data.growthTypes" ng-change="data.updateGrowthType()"></select>
                             </div>
                         </div>
                     </div>
@@ -50,7 +58,8 @@
         </div>
         <div class="well component-well dark-grey" ng-controller="Projection as projection">
             <h5>projection</h5>
-            currentPeriod: {{projection.currentPeriod}}
+            <p>currentPeriod: {{projection.currentPeriod}}</p>
+            <p>currentGrowthType: {{projection.currentGrowthType}}</p>
         </div>
     </div>
 </div>

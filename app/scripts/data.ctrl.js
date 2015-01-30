@@ -17,6 +17,9 @@
             { id: 3, name: '12 Months', period: 12 }
           ];
 
+        this.growthTypes = ['Linear','Exponential'];
+
+
         // load the initial data
         Model.getData(function(results) {
             self.model = results;
@@ -28,6 +31,9 @@
             Model.setCurrentPeriod(self.currentPeriod.period);
 
 
+            self.currentGrowthType = self.growthTypes[Number(results.growth_type)];
+            Model.setGrowthType(self.currentGrowthType);
+
           });
 
         // sets the new value of the time period
@@ -37,10 +43,20 @@
             if (!this.currentPeriod) {
                 return;
             }
-
             Model.setCurrentPeriod(this.currentPeriod.period);
-
           };
+
+        // data.updateGrowthType()
+        this.updateGrowthType = function() {
+            console.log('updateGrowthType ', this.currentGrowthType);
+
+            if (!this.currentGrowthType) {
+                return;
+            }
+            Model.setGrowthType(this.currentGrowthType);
+        };
+
+
 
       }]);
   }());
