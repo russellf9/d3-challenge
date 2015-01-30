@@ -34,7 +34,7 @@
                             <div class="col-md-3">
                                 <label for="currentDate" class="col-md-3 control-label form-label" style="text-align: left">Current Date</label>
                                 <p id="currentDate" style="display: inline">{{data.model.current_date | date: 'MMMM yyyy'}}</p>
-                                <p id="period" style="display: inline">{{data.model.periodicity}}</p>
+                                <p id="period" style="display: inline">{{data.model.periodicity | capitalizeAllWords}}</p>
                             </div>
                             <!--<label for="inputValue" class="col-md-1 control-label">Value</label>-->
                             <!--<div class="col-md-2">-->
