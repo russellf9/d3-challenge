@@ -2,17 +2,17 @@
     'use strict';
 
 
-angular.module('app')
+    angular.module('app')
     .controller('MainCtrl', ['Model', function($scope, Model) {
 
         this.test = 'my test';
 
-        console.log('MainCtrl', Model);
+        console.log('MainCtrl | model: ', Model);
 
-        var self = this;
+        //var self = this;
 
 //        Model.getData(function(results) {
 //            self.model = results;
 //        });
-    }]);
-}());
+      }]);
+  }());

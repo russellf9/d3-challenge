@@ -10,23 +10,19 @@
         var _data;
 
 
-
-
         return {
 
             getData: function(callback) {
                 if (_data) {
-                    callback(_data);
+                  callback(_data);
                 } else {
-                    $http.get('data/predict.json').success(function(data) {
+                  $http.get('data/predict.json').success(function(data) {
                         _data = data;
                         callback(data);
-                    });
+                      });
                 }
-            }
+              }
+          };
 
-        }
-
-
-    }]);
-}());
+      }]);
+  }());
