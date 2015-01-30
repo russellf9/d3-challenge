@@ -6,7 +6,8 @@ angular.module('app', [
     'ngSanitize',
     'ngRoute',
     'ngTouch',
-    'vr.directives.slider'
+    'vr.directives.slider',
+    'nvd3ChartDirectives'
   ])
     .config(function($routeProvider) {
         $routeProvider
