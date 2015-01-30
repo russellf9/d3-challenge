@@ -19,7 +19,8 @@
     "nvd3": "~1.1.15-beta",
     "angularjs-nvd3-directives": "~0.0.7",
     "bower": "*",
-    "jquery-ui": "~1.11.2"
+    "jquery-ui": "~1.11.2",
+    "angular-nvd3": "~0.0.9"
   },
   "resolutions": {
     "d3": "~3.5.3",

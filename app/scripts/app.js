@@ -7,7 +7,8 @@ angular.module('app', [
     'ngRoute',
     'ngTouch',
     'vr.directives.slider',
-    'nvd3ChartDirectives'
+    'nvd3ChartDirectives',
+    'nvd3'
   ])
     .config(function($routeProvider) {
         $routeProvider
