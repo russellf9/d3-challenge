@@ -69,7 +69,6 @@
 
             // update
             update: function() {
-                console.log('** update');
                 _values.currentPeriod = _currentPeriod;
                 $rootScope.$broadcast('valuesUpdated');
             }

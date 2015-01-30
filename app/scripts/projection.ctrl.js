@@ -5,8 +5,6 @@
     //controller for `projection`
     angular.module('app').controller('Projection', ['Model', '$scope', function(Model, $scope) {
 
-        console.log('Projection! | Model: ',Model);
-
         var self = this;
 
         this.currentMonth = 10;
@@ -14,12 +12,9 @@
         // watches for any change in the `model state`
         // using $on rather than $watch
         $scope.$on('valuesUpdated', function() {
-            console.log('update!: ', Model);
-
             self.currentPeriod = Model.getCurrentPeriod();
 
             self.currentGrowthType = Model.getGrowthType();
-            console.log('--- currentGrowthType: ', self.currentGrowthType);
 
             self.multiplier = Model.getMultiplier();
         });
@@ -64,7 +59,7 @@
                 }
             }
         };
-
+        // mock data
         this.data = [
             {
                 key: "Forecast",

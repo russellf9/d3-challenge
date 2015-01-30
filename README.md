@@ -24,5 +24,9 @@ npm update
 bower update
 ```
 
+## Screenshot
+
+![Magic Numbers](/app/img/d3-challenge-1.png?raw=true "D3-Challenge 150130")
+
 
 

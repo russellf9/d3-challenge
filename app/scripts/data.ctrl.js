@@ -5,8 +5,6 @@
     // a shared controller for the data
     angular.module('app').controller('Data', ['Model', function(Model) {
 
-        console.log('data ctrl! model: ', Model);
-
         var self = this;
 
         // define possible month periods
@@ -68,9 +66,6 @@
             }
             Model.setTimeframe(this.timeframe);
         };
-
-
-
 
       }]);
   }());
