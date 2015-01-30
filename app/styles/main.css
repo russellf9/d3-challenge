@@ -87,8 +87,8 @@ body {
 
 /*app styles*/
 .component-well {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .light-grey {
@@ -97,4 +97,12 @@ body {
 
 .dark-grey {
     background-color: #EFEFEF;
+}
+
+.form-label {
+    font-weight: normal;
+    font-size: 12px;
+    padding: 0;
+    width:100%;
+    text-align: left;
 }
