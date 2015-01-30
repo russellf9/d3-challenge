@@ -17,6 +17,8 @@
             self.currentPeriod = Model.getCurrentPeriod();
 
             self.currentGrowthType = Model.getGrowthType();
+
+            self.multiplier = Model.getMultiplier();
         });
 
       }]);

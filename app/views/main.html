@@ -51,6 +51,13 @@
                                 <label for="growth" class="col-md-1 control-label form-label" style="text-align: left">Growth</label>
                                 <select id="growth" class="form-control" ng-model="data.currentGrowthType" ng-options="currOption for currOption in data.growthTypes" ng-change="data.updateGrowthType()"></select>
                             </div>
+                            <!--MULTIPLIER-->
+                            <div class="col-md-3">
+                                <label for="multiplier" class="col-md-1 control-label form-label" style="text-align: left">Multiplier</label>
+                                <!--TODO combine the two inputs into a directive-->
+                                <input ng-if="data.currentGrowthType==='Exponential'" ng-disabled="data.currentGrowthType!=='Exponential'" type="number" id="multiplier" class="form-control" placeholder="ratio" ng-model="data.multiplier" autocomplete="off" ng-change="data.updateMultiplier()">
+                                <input ng-if="data.currentGrowthType!=='Exponential'" ng-disabled="true" type="string" id="multiplier-disabled" class="form-control" placeholder="ratio" autocomplete="off">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -60,6 +67,7 @@
             <h5>projection</h5>
             <p>currentPeriod: {{projection.currentPeriod}}</p>
             <p>currentGrowthType: {{projection.currentGrowthType}}</p>
+            <p>Multiplier: {{projection.multiplier}}</p>
         </div>
     </div>
 </div>

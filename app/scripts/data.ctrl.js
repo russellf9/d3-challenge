@@ -19,6 +19,8 @@
 
         this.growthTypes = ['Linear','Exponential'];
 
+        this.multiplier = 1;
+
 
         // load the initial data
         Model.getData(function(results) {
@@ -33,6 +35,9 @@
 
             self.currentGrowthType = self.growthTypes[Number(results.growth_type)];
             Model.setGrowthType(self.currentGrowthType);
+
+
+            Model.setMultiplier(self.multiplier);
 
           });
 
@@ -55,6 +60,15 @@
             }
             Model.setGrowthType(this.currentGrowthType);
         };
+
+        this.updateMultiplier = function() {
+            console.log('updateMultiplier ', this.multiplier);
+
+            if (!this.multiplier) {
+                return;
+            }
+            Model.setMultiplier(this.multiplier);
+        }
 
 
 
