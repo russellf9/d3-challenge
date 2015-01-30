@@ -4,7 +4,9 @@ angular.module('app', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ngTouch',
+    'vr.directives.slider'
   ])
     .config(function($routeProvider) {
         $routeProvider

@@ -11,31 +11,29 @@
             _currentPeriod,
             _growthType,
             _multiplier,
+            _timeframe,
             _values = {};
 
         return {
             // for the json data
             getData: function(callback) {
                 if (_data) {
-                  callback(_data);
+                    callback(_data);
                 } else {
-                  $http.get('data/predict.json').success(function(data) {
+                    $http.get('data/predict.json').success(function(data) {
                         _data = data;
                         callback(data);
-                      });
+                    });
                 }
-              },
+            },
             // period - just the numerical value
-            setCurrentPeriod : function(value) {
-                console.log('setCurrentPeriod');
-
+            setCurrentPeriod: function(value) {
                 _currentPeriod = value;
-
                 this.update();
-              },
-            getCurrentPeriod : function() {
+            },
+            getCurrentPeriod: function() {
                 return _values.currentPeriod;
-              },
+            },
             // growth
             setGrowthType: function(value) {
                 _growthType = value;
@@ -56,17 +54,26 @@
             getMultiplier: function(value) {
                 return _multiplier;
             },
+            // timeframe
+            setTimeframe: function(value) {
+                _timeframe = value;
+                this.update();
+
+            },
+            getTimeframe: function(value) {
+                return _timeframe;
+            },
             getUpdateValues: function() {
                 return _values;
-              },
+            },
+
             // update
-            update : function() {
-                console.log('update');
-                _values.currentPeriod =  _currentPeriod;
-
+            update: function() {
+                console.log('** update');
+                _values.currentPeriod = _currentPeriod;
                 $rootScope.$broadcast('valuesUpdated');
-              }
-          };
+            }
+        };
 
-      }]);
-  }());
+    }]);
+}());

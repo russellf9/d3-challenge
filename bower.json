@@ -17,9 +17,12 @@
     "angular-scenario": "1.2.6",
     "d3": "~3.5.3",
     "nvd3": "~1.1.15-beta",
-    "angularjs-nvd3-directives": "~0.0.7"
+    "angularjs-nvd3-directives": "~0.0.7",
+    "bower": "*",
+    "jquery-ui": "~1.11.2"
   },
   "resolutions": {
-    "d3": "~3.5.3"
+    "d3": "~3.5.3",
+    "angular": "1.2.28"
   }
 }
