@@ -85,8 +85,20 @@
                                     <slider ng-model="projection.currentMonth" floor="0" ceiling="100"></slider>
                                 </div>
                             </div>
-
+                            <!--CHART-->
+                            <div class="col-md-6">
+                                <nvd3-line-chart
+                                        data="projection.exampleData"
+                                        showXAxis="true"
+                                        showYAxis="true"
+                                        tooltips="false"
+                                        interactive="true"
+                                        width="300"
+                                        height="350">
+                                </nvd3-line-chart>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
