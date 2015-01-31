@@ -5,11 +5,12 @@
 For D3 I will use [angularjs-nvd3-directives](https://github.com/cmaurer/angularjs-nvd3-directives) and [d3js](http://d3js.org).
 
 ```
-bower install d3 --save-dev
-bower install nvd3 --save-dev
-bower install angularjs-nvd3-directives --save-dev
+$ bower install d3 --save-dev
+$ bower install nvd3 --save-dev
+$ bower install angularjs-nvd3-directives --save-dev
+$ bower install angular-nvd3 --save-dev
 ```
-For the D3 chart I was having dificulties using the module above so I switched to [angular-nvd3](https://github.com/krispo/angular-nvd3).
+For the D3 chart I was having difficulties using the module above (angularjs-nvd3-directives) so I switched to [angular-nvd3](https://github.com/krispo/angular-nvd3).
 
 Some handy d3 links:
 
@@ -17,11 +18,11 @@ Some handy d3 links:
 
 ## Plugins
 
-In install modules
+To install the required modules:
 
 ```
-npm update
-bower update
+$ npm update
+$ bower update
 ```
 
 ## Screenshot
